@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Css Selectors</title>
+    <style>
+        div {
+            color:red
+        }
+        .textcolor {
+            color:blue;
+        }
+        .largetext {
+            font-size: 30px;
+        }
+        #unique {
+            background-color: brown;
+        }
+        h4 ,a ,h3 {
+            color: lightgreen;
+
+        }
+        /* a {
+            color: lightgreen;
+        } */
+        h3 {
+            font-size: 40px;
+        }
+        /* children selector */
+        div>p>span {
+            color: black;
+        }
+        /* descendant selector */
+        /* div p span {
+            color: rgb(106, 231, 162);
+        } */
+        /* attribute selector */
+        a[href="http://nados.io" ] {
+
+            color:black;
+        }
+
+    </style>
+</head>
+<body>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus earum optio, ex distinctio assumenda consequatur aperiam nesciunt odit laudantium laboriosam reiciendis rem blanditiis ipsa? Saepe, at natus? Reprehenderit cum assumenda ex. Itaque, sed eius.</p>
+
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Architecto, modi dolore. Esse, quos. Nemo deserunt tempora aliquid animi iusto. Aspernatur ea quaerat omnis in neque deleniti, iure, nisi, soluta dolore possimus unde ipsa. Sequi.</p>
+    <!-- element selectors -->
+    <div>
+        <h1>First Heading</h1>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Atque, dignissimos aliquam debitis repudiandae sequi laborum, officiis vitae ab odit totam minus voluptatum quae aliquid saepe quis, libero excepturi tempora maiores quod tempore ut iusto.</p>
+    </div>
+
+    <!-- class Selectors -->
+    <p class="textcolor largetext" id="unique">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Labore delectus corrupti eos fugiat facere enim rem ipsam, corporis consequuntur modi magnam temporibus a! Aspernatur autem optio qui necessitatibus atque consequatur a accusantium adipisci quia.</p>
+
+    <p class="largetext">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Pariatur, perspiciatis itaque quibusdam at velit consectetur libero possimus impedit exercitationem provident, sed explicabo excepturi amet natus doloremque sapiente quis molestiae! Eveniet qui commodi officiis deserunt!</p>
+
+    <p class="textcolor">Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi ad perferendis alias sit fugiat nam quia laboriosam aliquam ea. Pariatur deserunt autem et a exercitationem, excepturi voluptatem corrupti amet nobis odit, ex ea possimus.</p>
+
+    <!-- Grouping selector -->
+    <h4>I am gonna get 10LPA PACKAGE</h4>
+
+    <a href="https://www.google.com" target="_blank">go to google</a>
+
+    <h3>i am gonna get it</h3>
+    
+    <!-- combinator selectors -->
+
+    <!-- descendant selector  -->
+
+    <div>
+        
+        <p><!-- p is descendant and child of div -->
+            <span>I  am a child.</span><!--span is a descendant of div but not a child of div-->
+        </p>
+    </div>
+
+    <div>
+        <span>
+            <p>
+                <span>I am a descendant</span>
+            </p>
+        </span>
+    </div>
+    <!-- Attribute selector -->
+    <a href="http://nados.io" target="_blank">NADOS</a>
+    <a href="https://google.co.in">Go to google</a>
+    <a href="https://netflix.com">netflix</a>
+</body>
+</html>

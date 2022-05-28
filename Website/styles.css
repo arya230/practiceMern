@@ -1,0 +1,68 @@
+html {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    
+}
+li {
+    
+    list-style: none;
+    margin-left: 2rem;
+    padding-top: 8px;
+
+}
+a {
+    text-decoration: none;
+}
+.navbar>nav{
+    display: flex;
+    justify-content: space-between;
+
+
+} 
+ul {
+    display: flex;
+    margin-right: 4rem;
+    
+}
+
+h1 {
+    margin-left: 4rem;
+}
+.welcomeImage>img {
+    height: 100vh;
+    width: 90vw;
+    margin-left: 4rem;
+    margin-right: 2rem;
+
+}
+.skills {
+    display: flex;
+    
+
+}
+.skills>div {
+    margin-left: 1vw;
+    width: 30vw;
+    text-align: center;
+    margin-top: 2rem;
+}
+.skills>div>p {
+    padding: 1rem;
+    
+}
+
+.footer {
+    /* Footer height is removed because div takes 100% of width so putting adjusting height is not required. */
+    /* height: 80px; */
+    background-color: black;
+    color: white;
+    text-align: center;
+}
+a:link, a:visited {
+    color:black;
+}
+a:hover { 
+    color:lightpink;
+}
+.footer>p {
+    font-size: 25px;
+}
