@@ -40,13 +40,17 @@ console.log(cars.length);
 // 2d array
 
 let array2d = [
-    [1, 2, 3],
-    [4, 5, 6],
+    ["BMW", 2, null],
+    [4, true, 6],
     [7, 8 ,9],
-];
-console.log(array2d);
-console.table(array2d);
-
-
+]; //array of arrays  
+["a", "b", "c"]  //array of strings
+[1, 2, 3]  //array of numbers
+console.log(array2d);  //prints 2d array
+console.table(array2d); //prints 2d array in the form of a table
+let res = array2d[1];
+console.log("printing of  res array");
+console.log(res);
+console.log("res of 2nd index");
+console.log(res[2]);
 console.log(array2d[1][2]);
-
