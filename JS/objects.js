@@ -43,11 +43,22 @@ let obj = {};
 //  console.log(str.toUpperCase());
 // for loop
 //in keyword  is used to get keys from that object
+
+
 for(let key in captainAmerica) {
     //key
     console.log(`${key} : ${captainAmerica[key]}`);
     //haathi jo variable ha uske andar meri key ki value padi hui ha
     //value
+    console.log(captainAmerica[key]);
     //variable ke andar jo binded value ha vo chahiye
-    console.log(captainAmerica["firstname"]);
+    // console.log(captainAmerica["firstname"]);
 }
+
+let car = {
+    name: "Ferrari",
+    model: 2022,
+    startEngine: function() {
+        console.log(`Starting the engine of the car ${this.name}`);
+    }
+};
