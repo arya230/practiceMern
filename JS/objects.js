@@ -38,6 +38,16 @@ let obj = {};
  };
  console.log(captainAmerica);
  console.log(captainAmerica.friends[0]);
-console.log(captainAmerica.sayHi());//method accessing
+ captainAmerica.sayHi();//method accessing
  //methods-> objects ke andar functions(
- console.log(str.toUpperCase());
+//  console.log(str.toUpperCase());
+// for loop
+//in keyword  is used to get keys from that object
+for(let key in captainAmerica) {
+    //key
+    console.log(`${key} : ${captainAmerica[key]}`);
+    //haathi jo variable ha uske andar meri key ki value padi hui ha
+    //value
+    //variable ke andar jo binded value ha vo chahiye
+    console.log(captainAmerica["firstname"]);
+}
