@@ -2,9 +2,9 @@
 // // variable declaration
 // var a;
 // //variable intialization
-// a=10;
-// console.log(typeof a);
-// console.log(a);
+a=10;
+console.log(typeof a);
+console.log(a);
 
 // a = "hello";
 // console.log(a);
