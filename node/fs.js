@@ -13,5 +13,5 @@ fs.appendFileSync("f1.txt", "\nyou guys are smart");
 console.log(res);
 // let data = fs.readFileSync("f1.txt",);
 // console.log(data + "");
-let data = fs.readFileSync("f1.txt","utf-8");
+let data = fs.readFileSync("os.js", "utf-8");
 console.log(data);

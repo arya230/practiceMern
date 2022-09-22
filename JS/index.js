@@ -47,7 +47,7 @@ var r = "hello";
 console.log(r);
 
 var r = 100;
-console.log(r);
+console.log(r); 
 
 //let keyword is used
  let l = 100;
