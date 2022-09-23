@@ -1,5 +1,7 @@
 const { Console } = require("console");
 const os = require("os"); 
+console.log(console);
+
 const { cpuUsage } = require("process");
 //returns the underlying architecture
 let mySystemArch = os.arch();
