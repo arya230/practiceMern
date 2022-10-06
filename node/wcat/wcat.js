@@ -5,13 +5,13 @@
 // //node wcat.js f1.txt f2.txt f3.txt 
 const fs = require("fs")
 let inputArr = process.argv.slice(2);
-console.log(inputArr);
+// console.log(inputArr);
 let filesArr = [];
 let optionsArr = [];
 //==========>placed files path in filesArr<==================
 for(let i = 0; i < inputArr.length; i++) {
     let firstChar = inputArr[i].charAt(0);
-    console.log(firstChar);
+    // console.log(firstChar);
     if (firstChar == '-') {
         optionsArr.push(inputArr[i]);
     }
@@ -20,7 +20,7 @@ for(let i = 0; i < inputArr.length; i++) {
     filesArr.push(inputArr[i]);
 }
 }
-console.log("files to be read are " + filesArr);
+// console.log("files to be read are " + filesArr);
 
 // //=================>check if all the files are present<========================
 
@@ -40,10 +40,10 @@ for(let i = 0; i < filesArr.length; i++) {
 
 
 }
-console.log(content);
+// console.log(content);
 
 let contentArr = content.split("\r\n");
-console.table(contentArr);
+// console.table(contentArr);
 
 //===================>check if -s is present or not<==============================
 let tempArr = [];
@@ -57,7 +57,7 @@ if(isSPresent) {
              contentArr[i] = null;
         }
     }
-    console.table(contentArr);
+    // console.table(contentArr);
     // let tempArr = [];
     //=====================>push everything in tempArr except null<============================
     for(let i = 0; i < contentArr.length; i++) {
@@ -66,5 +66,63 @@ if(isSPresent) {
         }
     }
    
-    console.log("data after removing extra lines\n", tempArr);
+    // console.log("data after removing extra lines\n", tempArr);
+    contentArr = tempArr;
 }
+
+let indexofN = optionsArr.indexOf("-n");
+let indexOfB = optionsArr.indexOf("-b"); 
+
+//if -n , -b is not found, -1  is returned
+
+let finalOption = "";
+//if both -n and -b are present
+
+if(indexofN != -1 && indexOfB != -1) {
+    if(indexofN < indexOfB) {
+        finalOption = "-n";
+    }
+    else {
+        finalOption = "-b";
+    }
+}
+// either -n or -b is present
+else {
+    if(indexofN != -1) {
+        finalOption = "-b";
+
+    }
+    else if(indexOfB != -1){
+        finalOption = "-b";
+
+    }
+}
+
+//calling of functions by evaluating finalOption
+
+if(finalOption == "-n") {
+    modifyContentByN();
+
+}
+else if(finalOption == "-b") {
+    modifyContentByB();
+}
+
+function modifyContentByN() {
+    for (let i = 0; i < contentArr.length; i++) {
+        contentArr[i] = (i+1) +") " + contentArr[i];
+    }
+}
+
+function modifyContentByB() {
+    let count = 1;
+    for (let i = 0; i < contentArr.length; i++) {
+        if (contentArr[i] != "") {
+            contentArr[i] = count + ") " + contentArr[i];
+            count ++;
+        }
+    }
+}
+
+
+console.log(contentArr);
