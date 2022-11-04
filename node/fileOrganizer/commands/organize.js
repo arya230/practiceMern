@@ -57,19 +57,44 @@ function organize(srcPath) {
     }
 }
 
-function getFolderName(srcPath) {
 
-    //magic
-    return folderName;
+function getFolderName(ext) {
+  //magic
+  for (let key in types) {
+    // console.log(key);
+    for (let i = 0; i < types[key].length; i++) {
+      if (types[key][i] == ext) {
+        return key;
+      }
+    }
+  }
+  return "miscellaneous"
 }
 
 function copyFileToDest(srcPath, fullPathOfFile, folderName) {
- //magic
- 
- 
+  //1. folderName ka path banana h
+  let destFolderPath = path.join(srcPath, "organized_files", folderName); //....../downloads/organized_files/archives
+  // console.log(des);
+  //2 check folder if exists, if it does not, then make folder
+
+  if (!fs.existsSync(destFolderPath)) {
+    fs.mkdirSync(destFolderPath);
+  }
+  //3. copy file from src folder to dest folder
+
+  // Returns the last portion of a path
+  let fileName = path.basename(fullPathOfFile); //abc.zip
+  let destFileName = path.join(destFolderPath, fileName);    
+                      // src        dest
+  fs.copyFileSync(fullPathOfFile, destFileName);
+  //magic
 }
 
 
-let srcPath = "E:\fjp\html\node\fileOrganizer\commands\downloads"; 
-organize(srcPath);
+// let srcPath = "E:\\fjp\\html\\node\\fileOrganizer\\commands\\downloads"; 
+// organize(srcPath);
 //organize("../wcat/wcat.js");
+
+module.exports = {
+    organize:organize
+}
