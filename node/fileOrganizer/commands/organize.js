@@ -27,7 +27,7 @@ function organize(srcPath) {
     fs.mkdirSync(organizedFiles);
   } else console.log("folder already exists");
 
-  //3. scan the entire srcPath(doenloads folder in this case)
+  //3. scan the entire srcPath(downloads folder in this case)
 
   //Reads the contents of the directory.-> basically reads the names of files present in directory
     let allFiles = fs.readdirSync(srcPath);

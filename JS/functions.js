@@ -1,7 +1,7 @@
 //Three types of functions
 
 // 1-) Normal functions
-//function definition
+//function definition or function declaration or function statement
 //function function_name(param1, param2) {
     //do something
 // }
@@ -94,3 +94,17 @@ let additionIIFE = (function (a, b) {
 // var message = greet(student);
 
   
+
+var x = 1;
+a();
+b();
+console.log(x);
+
+function a() {
+    var x = 10;
+    console.log(x);
+}
+function b() {
+    var x = 100;
+    console.log(x);
+}
