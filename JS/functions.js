@@ -95,16 +95,64 @@ let additionIIFE = (function (a, b) {
 
   
 
-var x = 1;
-a();
-b();
-console.log(x);
+// var x = 1;
+// a();
+// b();
+// console.log(x);
 
-function a() {
-    var x = 10;
-    console.log(x);
+// function a() {
+//     var x = 10;
+//     console.log(x);
+// }
+// function b() {
+//     var x = 100;
+//     console.log(x);
+// }
+
+
+function sayHello(param) {
+    console.log("Hello", param);
+    return 10;    
 }
-function b() {
-    var x = 100;
-    console.log(x);
+let output = sayHello();
+console.log("hello", output);
+
+//functions are called ffirst-class citizens
+// functions are treated as a variable
+let a = [1,2,3,4,5];
+let  b = a;
+console.log(b);
+
+// function expression
+let fnContainer = function fn() {
+    console.log("I am a function expression");
 }
+fnContainer();
+
+(function fn() { 
+    console.log("I am IIFE");
+    console.log("I will run on my own");
+})();
+
+// arrow function ->syntax, react, this
+
+let fn = num => num * num;
+console.log(fn(5));
+
+// first class citizens
+//1- assignment -> function expression
+//2- functions can be passed as variables
+//3- IIFE-> IMMEDIATELY INVOKED FUNCTION EXPRESSION
+//4- ARROW FUNCTIONS
+
+function sayHello(param) {
+    console.log("hello", param);
+    param();
+    return string;
+}
+
+function smaller() {
+    console.log("Hello I am smaller")
+}
+let rval = sayHello(smaller);
+console.log(rval);
