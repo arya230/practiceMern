@@ -1,8 +1,7 @@
 const { default: puppeteer } = require("puppeteer");
 
 const pupeeteer = require("puppeteer");
-let email = "aryagairola1997@gmail.com";
-let password = "@1021713Arya";
+
 
 let curTab;
 
