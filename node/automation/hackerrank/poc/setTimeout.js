@@ -96,7 +96,7 @@
 
 //fetch api
 
-console.log("before");
+console.log("before");  
 setTimeout(function () {
     console.log("time over");    
 },5000);
@@ -107,9 +107,13 @@ fetch("https://jsonplaceholder.typicode.com/todos/1")
       })
       .then(function (json){
         console.log(json);
+        
 
       });
 
 
 console.log("after");
+
+
+
 
