@@ -3,32 +3,35 @@
 const fs = require("fs");
 
 // //This is what callback hell is
+// readFile is async function 
+fs.readFile("f1.txt", function cb1(err, res){
+    //err will be when f1.txt does not exist at that location
+    if(err) {
+        console.log(err);
+    }else {
+        //res +"" is written because data comes in buffer so to convert buffer into string it is used 
+        console.log(res + "");
+        //now read f2 file
+        fs.readFile("f2.txt", function cb2(err, res) {
+            if(err) {
+                console.log(err);
+            }
+            else {
+                console.log(res + "");
+                fs.readFile("f3.txt", function cb3(err, res) {
+                    if(err) {
+                        console.log(err);
+                    }
+                    else {
+                        console.log(res + "");
+                        console.log("read all files");
+                    }
+                })
+            }
+        });
+    }
 
-// fs.readFile("f1.txt", function cb1(err, res){
-//     if(err) {
-//         console.log(err);
-//     }else {
-//         console.log(res + "");
-//         fs.readFile("f2.txt", function cb2(err, res) {
-//             if(err) {
-//                 console.log(err);
-//             }
-//             else {
-//                 console.log(res + "");
-//                 fs.readFile("f3.txt", function cb3(err, res) {
-//                     if(err) {
-//                         console.log(err);
-//                     }
-//                     else {
-//                         console.log(res + "");
-//                         console.log("read all files");
-//                     }
-//                 })
-//             }
-//         });
-//     }
-
-// });
+});
 
 
 

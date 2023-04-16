@@ -3,7 +3,8 @@
 //2nd way to overcome callback hell is to use promises
 const fs = require("fs");
 
-
+                                 //readFile does callbacks means it is implemented in callbacks
+                    // to convert readFile in Promises we write fs.promises or return promise
 let f1readPromise = fs.promises.readFile("f1.txt");
 
 function readf2file(data) {
@@ -31,3 +32,7 @@ f1readPromise
  .catch(function(err) {
     console.log(err);
  });
+
+
+
+ //q2. read files f1.txt f2.txt and f3.txt   parallely using promises
