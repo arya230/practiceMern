@@ -29,13 +29,55 @@
 //     console.log(obj1[key]);
 // }
 
-let user = {
-    name: "Arya",
-    sayHi() {
-        console.log(this.name);
+// let user = {
+//     name: "Arya",
+//     sayHi() {
+//         console.log(this.name);
+//     }
+// }
+// let admin = user;
+// user.sayHi();
+// user = null;
+// admin.sayHi();
+
+
+//1ST RULE => The value of this is evaluated during the run-time, depending on the context.
+
+//2ND RULE => 
+
+// this interview type questions
+//1st type
+//default binding
+function type1() {
+    console.log(this.name);
+  }
+  
+  var name = "JS";
+  
+  type1();  //globally , this -> window ,   
+
+
+  //2nd type
+function type2() {
+    console.log(this.lname);
+}
+var lname = "Kumar";
+
+var obj = {
+    lname:"Verma", 
+    type2
+};
+Object.type2();//in EXECUTION context of function, 'this' gives will reference to the object
+
+//3rd type
+
+var food = "Pizza";
+var obj = {
+    food: "Pasta",
+    eat() {
+        console.log("i am eating " + this.food);
     }
 }
-let admin = user;
-user.sayHi();
-user = null;
-admin.sayHi();
+
+var foo = obj.eat;
+foo();      
