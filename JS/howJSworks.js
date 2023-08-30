@@ -27,3 +27,5 @@ var square4 = square(4);
 console.log(n);
 console.log(square2);
 console.log(square4);
+
+

@@ -7,6 +7,7 @@ console.log(cars[0]);
 console.log(cars[3]);
 
 // replacing the elements of an array
+
 cars[3] = "Mahindra";
 console.log(cars[3]);
 
@@ -48,14 +49,14 @@ let array2d = [
 [1, 2, 3]  //array of numbers
 console.log(array2d);  //prints 2d array
 console.table(array2d); //prints 2d array in the form of a table
-let res = array2d[1];
-console.log("printing of  res array");
-console.log(res);
-console.log("res of 2nd index");
-console.log(res[2]);
-console.log("line 56 prints this " + array2d[1][2]);
-console.log(array2d.length);   //no of rows in a 2d array
-console.log(array2d[0].length); //no of columns in a 2d array
-//2d me value kaise daale
-array2d[1][1] = false;
-console.table(array2d);
+// let res = array2d[1];
+// console.log("printing of  res array");
+// console.log(res);
+// console.log("res of 2nd index");
+// console.log(res[2]);
+// console.log("line 56 prints this " + array2d[1][2]);
+// console.log(array2d.length);   //no of rows in a 2d array
+// console.log(array2d[0].length); //no of columns in a 2d array
+// //2d me value kaise daale
+// array2d[1][1] = false;
+// console.table(array2d);
