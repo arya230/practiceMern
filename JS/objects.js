@@ -130,13 +130,13 @@
 
 //  console.log(obj.lastName);
 
- let user = {};
+//  let user = {};
 //  user["likes birds"] = true;
 //  console.log(user["likes birds"]);
  
-let key = "likes birds";
-user[key] = true;
-console.log(user[key]);
+// let key = "likes birds";
+// user[key] = true;
+// console.log(user[key]);
 
 // let user = {
 //   name: "John",
@@ -148,4 +148,51 @@ console.log(user[key]);
 // // access by variable
 // console.log(user[key]); 
 
-let person = {};
+// let user = {};
+// user = {
+//     name: "arya",
+//     age: 26,
+//     dob:2611
+// }
+
+// console.log(user);
+// user["likes birds"] = true;
+// // console.log(user);
+// // delete user["likes birds"];
+
+// // let key = "like bird";
+// // user[key] = true;
+// // console.log(user);
+
+
+// let user = { name: "John" };
+// let admin = { name: "Admin" };
+
+// function sayHi() {
+//   console.log( this.name );
+// }
+
+// // use the same function in two objects
+// user.f = sayHi;
+// admin.f = sayHi;
+
+// // these calls have different this
+// // "this" inside the function is the object "before the dot"
+// user.sayHi(); // John  (this == user)
+// admin.sayHi(); // Admin  (this == admin)
+
+// admin['f']();
+
+
+const person = {
+  name: 'peter',
+  birthYear: 1994,
+  calcAge: function() {
+    console.log(2018 - this.birthYear);
+  }
+}
+person.calcAge(); 
+// 'this' refers to 'person', because 'calcAge' was called with //'person' object reference
+const calculateAge = person.calcAge;
+calculateAge();
+// 'this' refers to the global window object, because no object reference was given
