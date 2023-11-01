@@ -96,3 +96,25 @@ for(a = 1, b = 2, c = a*b; a<10; a++) {
 }
 console.log(c);
 
+// comparison operators
+
+//boolean is the result
+// for eg
+
+console.log(7 > 1);
+
+let ab = 7 >= 6;
+console.log(ab);
+
+//true is equal to 1 and false is equal to 0
+// eg
+console.log(true == 1);
+console.log(false == 0);
+
+console.log(0 == false);
+console.log('' == false);
+
+// difference  between  == and === operator is == does automatic type conversion and === is strictly type so it checks for equality of data types
+
+console.log(0 == false);
+console.log("0" === false)

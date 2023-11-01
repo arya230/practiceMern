@@ -25,13 +25,13 @@
 
 // //hoisting another example
 
-getName();
-console.log(x);
-console.log(getName);
-var x = 2;
-function getName() {
-    console.log("namaste js");
-}
+// getName();
+// console.log(x);
+// console.log(getName);
+// var x = 2;
+// function getName() {
+//     console.log("namaste js");
+// }
 
 // console.log("hello");
 // hello();
@@ -40,3 +40,47 @@ function getName() {
 // }
 // hello();
 
+// let foo ="arya"
+// function getName(foo) {
+//     console.log(foo);
+//     console.log(typeof foo);
+//     var foo = "bar";
+//     console.log(foo);
+
+// }
+// getName(foo);
+
+// console.log(foo);
+// var foo = 'foo'; 
+
+// console.log(foo);
+// foo = "foo";
+
+
+// function foobar(foo = bar, bar = 'bar') {
+//     console.log(foo);
+//   }
+//   foobar(); // Uncaught ReferenceError: Cannot access 'bar' before initialization
+  //error comes  because bar is not initialized before we are accessing it
+
+  //for eg the code below will run
+
+//   function foobar1(bar = 'bar', foo = bar) {
+//     console.log(foo);
+
+
+//   }
+//   foobar1();
+
+
+//   function hoisting
+console.log(getName);
+console.log(x);
+var x = 7;
+function getName() {
+    console.log("Namaste Javascript");
+
+}
+
+
+console.log(getName);

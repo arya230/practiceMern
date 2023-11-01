@@ -232,17 +232,61 @@
 // console.log(ans);
 // console.log();
 
-let userName = 'John';
+// let userName = 'John';
 
-function showMessage() {
-  userName = "Bob"; // (1) changed the outer variable
+// function showMessage() {
+//   userName = "Bob"; // (1) changed the outer variable
 
-  let message = 'Hello, ' + userName;
-  console.log(message);
+//   let message = 'Hello, ' + userName;
+//   console.log(message);
+// }
+
+// console.log( userName ); // John before the function call
+
+// showMessage();
+
+// console.log( userName );
+
+
+
+
+// var x = 1;
+// a();
+// b();
+// console.log(x);
+// function a() {
+//   var x = 10;
+//   console.log(x);
+// }
+// function b() {
+//   var x= 100;
+//   console.log(x);
+// }
+
+
+function myFunc(theObject) {
+    theObject.make = "Toyota";
 }
 
-console.log( userName ); // John before the function call
+const mycar = {
+  make: "Honda",
+  model: "Accord",
+  year: 1998,
+};
 
-showMessage();
+console.log(mycar.make);
+myFunc(mycar);
+console.log(mycar.make);
 
-console.log( userName );
+function myFunc(theArr) {
+  theArr[0] = 30;
+}
+
+const arr = [45];
+
+console.log(arr[0]); // 45
+myFunc(arr);
+console.log(arr[0]);
+
+
+// function expression
