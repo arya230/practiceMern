@@ -48,36 +48,58 @@
 // this interview type questions
 //1st type
 //default binding
-function type1() {
-    console.log(this.name);
-  }
+// function type1() {
+//     console.log(this.name);
+//   }
   
-  var name = "JS";
+//   var name = "JS";
   
-  type1();  //globally , this -> window ,   
+//   type1();  //globally , this -> window ,   
 
 
   //2nd type
 function type2() {
     console.log(this.lname);
-}
+} 
 var lname = "Kumar";
 
 var obj = {
     lname:"Verma", 
     type2
 };
-Object.type2();//in EXECUTION context of function, 'this' gives will reference to the object
+// Obj.type2();//in EXECUTION context of function, 'this' gives will reference to the object
+console.log(obj);
+type2();
+// //3rd type
 
-//3rd type
+// var food = "Pizza";
+// var obj = {
+//     food: "Pasta",
+//     eat() {
+//         console.log("i am eating " + this.food);
+//     }
+// }
 
-var food = "Pizza";
-var obj = {
-    food: "Pasta",
-    eat() {
-        console.log("i am eating " + this.food);
-    }
+// var foo = obj.eat;
+// foo();      
+
+
+//4th question
+
+var length = 1;
+function square() {
+  let cb = function () {
+    console.log(this.length * this.length);
+  }
+  setTimeout(cb, 2000);
 }
+var obj = {
+  length: 3,
+  square
+};
 
-var foo = obj.eat;
-foo();      
+obj.square();
+
+
+
+
