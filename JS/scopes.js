@@ -26,14 +26,25 @@ is variable/function inside the scope of code/functions*/
 // a();
 
 
+// function a() {
+//     var b = 10;
+//     c();
+//     function c() {
+        
+//     }
+// }
+
+
+// a();
+// console.log(b); 
+
 function a() {
-    var b = 10;
+    // console.log(b);
     c();
     function c() {
-        
+        console.log(b);
     }
 }
 
-
+var b = 10;
 a();
-console.log(b); 

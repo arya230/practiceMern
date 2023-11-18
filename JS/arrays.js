@@ -16,7 +16,7 @@ cars[7] = "Honda";
 console.log(cars);
 
 // methods of an array
-//1- pop-> this method removes the element from the last of the array
+//1- pop-> this method removes the last element  of the array
 cars.pop();
 console.log("after popping the element\n" + cars);
 
@@ -60,3 +60,72 @@ console.table(array2d); //prints 2d array in the form of a table
 // //2d me value kaise daale
 // array2d[1][1] = false;
 // console.table(array2d);
+
+
+// there are two ways to create an array 
+// let array = new array();
+let arr =[];
+
+let fruits = ["orange", "apple", "mango"];
+
+console.log(fruits[2]);
+console.log(fruits.pop());
+console.log(fruits);
+fruits.push("CR7");
+console.log(fruits);  
+fruits[fruits.length] = "LEO";  
+console.log(fruits);
+fruits.shift();
+console.log(fruits);
+fruits.unshift("Arya");
+console.log(fruits);
+// an array in js can store values of any type for eg.
+
+let values = ['apple', {name: 'john'}, true, function() {alert('hello')}];
+//get the object at index1 and show its name
+
+console.log(values[1].name);
+
+values[3];
+
+let v = ["a", "b", "c", true,];
+console.log(v);
+console.log(v[v.length - 1]);
+
+// arrays are objects in js and thus are copied by reference
+
+
+let fruit = ["Banana"];
+
+let arr1 = fruit;
+
+console.log(arr1 === fruit);
+
+arr1.push("pear");
+
+console.log(fruit);
+console.log(arr1);
+
+
+
+let arya = ["arya","gairola","26","male"];
+// arr[9999] = "cristiano ronaldo";
+for(let details of arya) {
+    console.log(details);
+}
+
+for(let details in arya) {
+    console.log(details);
+}
+
+//tasks
+let styles = ["Jazz", "Blues"];
+styles.push("Rock-n-Roll");
+console.log(styles);
+console.log(styles.length);
+styles[Math.floor(styles.length / 2)] = "classics";
+console.log(styles);
+styles.shift();
+console.log(styles);
+styles.unshift("Rap", "Reggae");
+console.log(styles);

@@ -290,3 +290,18 @@ console.log(arr[0]);
 
 
 // function expression
+
+function map(f, a) {
+  const result = [];
+  for (let i = 0; i < a.length; i++) {
+    result[i] = f(a[i]);
+  }
+  return result;
+}
+
+const cube = function (x) {
+  return x * x * x;
+};
+
+const numbers = [0, 1, 2, 5, 10];
+console.log(map(cube, numbers));
