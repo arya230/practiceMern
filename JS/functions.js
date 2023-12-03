@@ -264,44 +264,56 @@
 // }
 
 
-function myFunc(theObject) {
-    theObject.make = "Toyota";
-}
+// function myFunc(theObject) {
+//     theObject.make = "Toyota";
+// }
 
-const mycar = {
-  make: "Honda",
-  model: "Accord",
-  year: 1998,
-};
+// const mycar = {
+//   make: "Honda",
+//   model: "Accord",
+//   year: 1998,
+// };
 
-console.log(mycar.make);
-myFunc(mycar);
-console.log(mycar.make);
+// console.log(mycar.make);
+// myFunc(mycar);
+// console.log(mycar.make);
 
-function myFunc(theArr) {
-  theArr[0] = 30;
-}
+// function myFunc(theArr) {
+//   theArr[0] = 30;
+// }
 
-const arr = [45];
+// const arr = [45];
 
-console.log(arr[0]); // 45
-myFunc(arr);
-console.log(arr[0]);
+// console.log(arr[0]); // 45
+// myFunc(arr);
+// console.log(arr[0]);
 
 
 // function expression
 
-function map(f, a) {
-  const result = [];
-  for (let i = 0; i < a.length; i++) {
-    result[i] = f(a[i]);
+// function map(f, a) {
+//   const result = [];
+//   for (let i = 0; i < a.length; i++) {
+//     result[i] = f(a[i]);
+//   }
+//   return result;
+// }
+
+// const cube = function (x) {
+//   return x * x * x;
+// };
+
+// const numbers = [0, 1, 2, 5, 10];
+// console.log(map(cube, numbers));
+
+
+
+function outer() {
+  console.log("I am returning outer");
+  return function inner() {
+    console.log("I am inner");
   }
-  return result;
 }
-
-const cube = function (x) {
-  return x * x * x;
-};
-
-const numbers = [0, 1, 2, 5, 10];
-console.log(map(cube, numbers));
+let rval = outer();
+console.log("Rval", rval);
+rval();

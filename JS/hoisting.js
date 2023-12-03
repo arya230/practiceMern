@@ -2,9 +2,11 @@
 // function greet() {
 //     console.log("hello pepcoders");
 // }
+// hello(); //this is throw an error
 // console.log(x);
 // greet();
-// hello(); //this is throw an error
+
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
 // console.log(x);
@@ -14,6 +16,9 @@
 // function greet() {
 //     console.log("hello pepcoders");
 // }
+
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 //function expression
 // var hello = function() {
 //     console.log("you guys rock");
@@ -24,14 +29,21 @@
 // // we can access the variables even before we have declared its value
 
 // //hoisting another example
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-// getName();
-// console.log(x);
-// console.log(getName);
-// var x = 2;
-// function getName() {
-//     console.log("namaste js");
-// }
+
+getName();
+console.log(x);
+console.log(getName);
+var x = 2;
+function getName() {
+    console.log("namaste js");
+}
+
+
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
 
 // console.log("hello");
 // hello();
@@ -40,21 +52,26 @@
 // }
 // hello();
 
-// let foo ="arya"
-// function getName(foo) {
-//     console.log(foo);
-//     console.log(typeof foo);
-//     var foo = "bar";
-//     console.log(foo);
 
-// }
-// getName(foo);
 
-// console.log(foo);
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+let foo ="arya"
+function getName(foo) {
+    console.log(foo);
+    console.log(typeof foo);
+    var foo = "bar";
+    console.log(foo);
+
+}
+getName(foo);
+
+console.log(foo);
 // var foo = 'foo'; 
 
-// console.log(foo);
-// foo = "foo";
+console.log(foo);
+foo = "foo";
+
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
 // function foobar(foo = bar, bar = 'bar') {
@@ -72,8 +89,11 @@
 //   }
 //   foobar1();
 
-
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 //   function hoisting
+
+
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 console.log(getName);
 console.log(x);
 var x = 7;
@@ -84,3 +104,5 @@ function getName() {
 
 
 console.log(getName);
+
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
