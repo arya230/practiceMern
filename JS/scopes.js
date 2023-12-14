@@ -38,13 +38,33 @@ is variable/function inside the scope of code/functions*/
 // a();
 // console.log(b); 
 
-function a() {
-    // console.log(b);
-    c();
-    function c() {
-        console.log(b);
-    }
-}
+// function a() {
+//     // console.log(b);
+//     c();
+//     function c() {
+//         console.log(b);
+//     }
+// }
 
-var b = 10;
-a();
+// var b = 10;
+// a();
+
+
+
+// var num = 3
+// var increment = function() {
+// return num+1;
+// }
+// console.log(increment());
+// console.dir(increment);
+
+
+var Function = function () {
+    var name = 'Aastha';
+    var OtherFunction = function () {
+      console.log('My name is ' + name); // Accessing variable name of parent scope.
+    };
+    console.log(name);
+    OtherFunction(); // call function
+  };
+  Function();

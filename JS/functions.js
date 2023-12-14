@@ -308,12 +308,13 @@
 
 
 
-function outer() {
-  console.log("I am returning outer");
-  return function inner() {
-    console.log("I am inner");
-  }
-}
-let rval = outer();
-console.log("Rval", rval);
-rval();
+// function outer() {
+//   console.log("I am returning outer");
+//   return function inner() {
+//     console.log("I am inner");
+//   }
+// }
+// let rval = outer();
+// console.log("Rval", rval);
+// rval();
+
