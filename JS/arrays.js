@@ -129,3 +129,17 @@ styles.shift();
 console.log(styles);
 styles.unshift("Rap", "Reggae");
 console.log(styles);
+
+
+//array practice
+
+let names = ["arya", "cr7", "ronaldo"];
+console.log(names[0]);
+
+let arr3 = ['apple', {name : "john"}, true, function() {console.log("hello");}];
+console.log(arr3);
+console.log(arr3[1].name);
+console.log(arr3[3]());
+
+let gar = [1,2,3,4,5];
+console.log(gar);

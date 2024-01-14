@@ -366,3 +366,7 @@ for(key in user) {
   console.log(key + " and its value is " + user[key]);
   
 }
+
+
+//objects can be created using two methods
+

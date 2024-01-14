@@ -1,4 +1,7 @@
+
+
 // var str = "Hello Pepcoders";
+
 // console.log(str);
 // console.log(str[4]);
 
@@ -47,18 +50,101 @@
 // console.log(trimStr.length);
 // console.log(trimStr.trim().length);
 
-var str = "Hello My Name is Arya";
-console.log(str);
-var a = str.split(" ");//divides the string on the basis of argument and puts them in an array
-console.log(a);
+// var str = "Hello My Name is Arya";
+// console.log(str);
+// var a = str.split(" ");//divides the string on the basis of argument and puts them in an array
+// console.log(a);
 
 
 
-console.log('35' + '25');
+// console.log('35' + '25');
 
-let iceCream = "chocolate";
-if (iceCream === "chocolate") {
-  console.log("Yay, I love chocolate ice cream!");
-} else {
-  console.log("Awwww, but chocolate is my favorite…");
+// let iceCream = "chocolate";
+// if (iceCream === "chocolate") {
+//   console.log("Yay, I love chocolate ice cream!");
+// } else {
+//   console.log("Awwww, but chocolate is my favorite…");
+// }
+
+
+// let name = "Arya";
+
+// console.log(`My name is arya${1}`);
+// console.log(`My name is Arya${"hello"}`);
+// console.log(`My name is ${name}`);
+
+// let name1 = prompt("What  is your name" , Arya);
+// console.log(name1);
+
+// function add(a, b) {
+//   let sum = a + b;
+//   return sum;
+// }
+
+// console.log(`1 + 2 = ${add(1,2)}.`);
+
+//string are immutable in javascript
+
+// we can 
+
+// let str =  "hello";
+// str = "h" + str[0];
+// console.log(str);
+
+//str.indexOf()=> finds the position of the substring
+
+//uppercase the first letter
+
+
+//Q1- String practice questions
+
+
+function ucFirst(str) {
+  let newStr = str.slice(1);
+  newStr = "J" + newStr;
+  console.log(newStr);
+
+
 }
+
+ucFirst("john");
+
+
+
+// Q2- String practice questions
+
+
+function checkSpam(str) {
+  let lowerStr = str.toLowerCase();
+  return lowerStr.includes('viagra') || str.includes('xxx');
+
+
+
+}
+console.log(checkSpam('buy ViAgRA now'));
+console.log(checkSpam('free xxxxx'));
+console.log(checkSpam("innocent rabbit"));
+
+
+// Q3- string practice questions
+
+
+function truncate(str, maxLength) {
+  if(str.length > maxLength) {
+    return str.slice(0, maxLength - 1) + "...";
+    
+
+
+  }
+
+
+}
+
+
+console.log(truncate("What I'd like to tell on this topic is:", 20));
+
+// Q4-  String practice questions
+
+
+
+

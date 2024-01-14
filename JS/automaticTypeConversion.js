@@ -38,3 +38,21 @@ console.log(undefined + 1);//nan
 
 console.log(" \t \n" - 2);//1
 
+
+console.log(5/2);
+
+console.log("FirstLine\n\tSecondLine\nThirdLine");  
+
+
+const sum = 35 + "hello";
+console.log(sum);
+console.log(typeof sum);
+
+
+const string = "";
+const number = 40;
+const boolean = true;
+
+console.log(!string);
+console.log(boolean + string);
+console.log(40 + true);
